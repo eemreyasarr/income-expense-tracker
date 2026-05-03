@@ -7,11 +7,17 @@ export function TransactionArea({ transactions }) {
     const { state } = useAppState();
 
     const selectedType = state.filters.selectedType;
+    const selectedCategory = state.filters.selectedCategory;
 
-    const filteredTransactions =
-        selectedType === "all"
-            ? transactions
-            : transactions.filter(item => item.type === selectedType);
+    const filteredTransactions = transactions.filter(item => {
+        const typeMatch =
+            selectedType === "all" || item.type === selectedType;
+
+        const categoryMatch =
+            selectedCategory === "all" || item.category === selectedCategory;
+
+        return typeMatch && categoryMatch;
+    });
 
     return (
         <section className="card transaction-area">

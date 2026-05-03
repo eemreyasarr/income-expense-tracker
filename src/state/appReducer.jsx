@@ -5,6 +5,8 @@ import {
     ADD_GOAL,
     SET_MONTH,
     SET_TYPE,
+    SET_CATEGORY,
+    RESET_APP
 } from "./appActions";
 
 export function appReducer(state, action) {
@@ -51,6 +53,23 @@ export function appReducer(state, action) {
                     ...state.filters,
                     selectedType: action.payload,
                 },
+            };
+
+        case SET_CATEGORY:
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    selectedCategory: action.payload,
+                },
+            };
+
+        case RESET_APP:
+            return {
+                ...state,
+                transactions: [],
+                budgets: [],
+                goals: [],
             };
 
         default:

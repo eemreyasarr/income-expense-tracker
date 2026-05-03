@@ -2,14 +2,14 @@ import { useAppState } from "../../state/useAppState";
 import { DELETE_TRANSACTION } from "../../state/appActions";
 
 export function TransactionItem({ transaction }) {
-    const { state } = useAppState();
+    const { state, dispatch } = useAppState();
 
     const isIncome = transaction.type === "income";
 
     function handleDelete() {
-        state({
+        dispatch({
             type: DELETE_TRANSACTION,
-            payload: transaction.id,
+            payload: transaction.id
         });
     }
 

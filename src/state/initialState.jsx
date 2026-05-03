@@ -54,5 +54,6 @@ export const initialState = {
     filters: {
         selectedMonth: "2026-05",
         selectedType: "all",
+        selectedCategory: "all",
     },
 };

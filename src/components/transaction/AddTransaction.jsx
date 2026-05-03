@@ -3,23 +3,33 @@ import { useAppState } from "../../state/useAppState";
 import { ADD_TRANSACTION } from "../../state/appActions";
 
 export function AddTransaction() {
-    const { dispatch } = useAppState();
+    const { state, dispatch } = useAppState();
 
     const [title, setTitle] = useState("");
     const [amount, setAmount] = useState("");
     const [type, setType] = useState("expense");
+    const [category, setCategory] = useState("Food");
+    const [error, setError] = useState("");
 
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (!title || !amount) return;
+        if (!title.trim()) {
+            setError("Please enter a title.");
+            return;
+        }
+
+        if (!amount || Number(amount) <= 0) {
+            setError("Please enter a valid amount.");
+            return;
+        }
 
         const newTransaction = {
             id: Date.now().toString(),
-            title,
+            title: title.trim(),
             amount: Number(amount),
             type,
-            category: "General",
+            category,
             date: new Date().toISOString().split("T")[0],
         };
 
@@ -30,11 +40,16 @@ export function AddTransaction() {
 
         setTitle("");
         setAmount("");
+        setType("expense");
+        setCategory("Food");
+        setError("");
     }
 
     return (
         <form className="add-form" onSubmit={handleSubmit}>
             <h3>Add Transaction</h3>
+
+            {error && <p className="form-error">{error}</p>}
 
             <div className="form-row">
                 <input
@@ -44,7 +59,7 @@ export function AddTransaction() {
                 />
 
                 <input
-                    placeholder="Amount"
+                    placeholder={`Amount (${state.currentCurrency})`}
                     type="number"
                     value={amount}
                     onChange={e => setAmount(e.target.value)}
@@ -53,6 +68,15 @@ export function AddTransaction() {
                 <select value={type} onChange={e => setType(e.target.value)}>
                     <option value="expense">Expense</option>
                     <option value="income">Income</option>
+                </select>
+
+                <select value={category} onChange={e => setCategory(e.target.value)}>
+                    <option value="Food">Food</option>
+                    <option value="Home">Home</option>
+                    <option value="Job">Job</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Health">Health</option>
+                    <option value="General">General</option>
                 </select>
 
                 <button type="submit">Add</button>

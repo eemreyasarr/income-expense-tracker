@@ -618,3 +618,79 @@ button:hover {
 .goal-card:hover {
   background: #f8fafc;
 }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 140px 140px 140px 90px;
+  gap: 12px;
+}
+
+.form-error {
+  margin: 0 0 12px;
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.empty-box {
+  text-align: center;
+  padding: 28px 16px;
+  background: #f8fafc;
+  border-radius: 18px;
+  border: 1px dashed #cbd5e1;
+}
+
+.empty-box h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #111827;
+}
+
+.empty-box p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.top-actions input[type="month"] {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 11px 14px;
+  background: #ffffff;
+}
+
+.filter-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-row .filter-select {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .filter-row {
+    flex-direction: column;
+  }
+
+  .filter-row .filter-select {
+    width: 100%;
+  }
+}
+
+.danger-button {
+  background: #ef4444;
+}
+
+.danger-button:hover {
+  opacity: 0.9;
+}
