@@ -3,6 +3,7 @@ import { SummaryArea } from "../components/summary/SummaryArea";
 import { TransactionArea } from "../components/transaction/TransactionArea";
 import { BudgetArea } from "../components/budget/BudgetArea";
 import { GoalArea } from "../components/goal/GoalArea";
+import { ExpenseArea } from "../components/expense/ExpenseArea";
 
 export function DashboardPage() {
     const { state } = useAppState();
@@ -16,6 +17,8 @@ export function DashboardPage() {
             <BudgetArea budgets={state.budgets} />
 
             <GoalArea goals={state.goals} />
+
+            <ExpenseArea transactions={state.transactions} />
         </main>
     );
 }
