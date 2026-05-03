@@ -1,4 +1,8 @@
+import { useAppState } from "../../state/useAppState";
+
 export function ExpenseItem({ expense }) {
+    const { state } = useAppState()
+
     return (
         <div className="small-item">
             <div className="item-icon">
@@ -11,7 +15,7 @@ export function ExpenseItem({ expense }) {
             </div>
 
             <strong className="expense-text">
-                - {expense.amount} CHF
+                - {expense.amount} {state.currentCurrency}
             </strong>
         </div>
     );

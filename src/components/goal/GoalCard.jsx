@@ -1,6 +1,8 @@
+import { useAppState } from "../../state/useAppState";
 import { GoalProgress } from "./GoalProgress";
 
 export function GoalCard({ goal }) {
+    const { state } = useAppState()
     const percent = Math.round((goal.saved / goal.target) * 100);
 
     return (
@@ -13,7 +15,7 @@ export function GoalCard({ goal }) {
             <GoalProgress percent={percent} />
 
             <p className="muted">
-                {goal.saved} CHF saved from {goal.target} CHF
+                {goal.saved} {state.currentCurrency} saved from {goal.target} {state.currentCurrency}
             </p>
         </div>
     );

@@ -1,4 +1,5 @@
 export const initialState = {
+    currentCurrency: "CHF",
     transactions: [
         {
             id: "1",

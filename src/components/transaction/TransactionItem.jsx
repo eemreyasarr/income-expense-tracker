@@ -2,12 +2,12 @@ import { useAppState } from "../../state/useAppState";
 import { DELETE_TRANSACTION } from "../../state/appActions";
 
 export function TransactionItem({ transaction }) {
-    const { dispatch } = useAppState();
+    const { state } = useAppState();
 
     const isIncome = transaction.type === "income";
 
     function handleDelete() {
-        dispatch({
+        state({
             type: DELETE_TRANSACTION,
             payload: transaction.id,
         });
@@ -22,7 +22,7 @@ export function TransactionItem({ transaction }) {
 
             <div className="transaction-right">
                 <strong className={isIncome ? "income-text" : "expense-text"}>
-                    {isIncome ? "+" : "-"} {transaction.amount} CHF
+                    {isIncome ? "+" : "-"} {transaction.amount} {state.currentCurrency}
                 </strong>
                 <p>{transaction.date}</p>
             </div>

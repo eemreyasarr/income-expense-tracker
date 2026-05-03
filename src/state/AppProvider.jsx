@@ -4,17 +4,17 @@ import { appReducer } from "./appReducer";
 import { initialState } from "./initialState";
 
 function getSavedState() {
-    const savedState = localStorage.getItem("income-expense-state");
+    // const savedState = localStorage.getItem("income-expense-state");
 
-    if (savedState) {
-        return JSON.parse(savedState);
-    }
+    // if (savedState) {
+    //     return JSON.parse(savedState);
+    // }
 
     return initialState;
 }
 
 export function AppProvider({ children }) {
-    const [state, dispatch] = useReducer(appReducer, initialState, getSavedState);
+    const [state, dispatch] = useReducer(appReducer, initialState);
 
     useEffect(() => {
         localStorage.setItem(
