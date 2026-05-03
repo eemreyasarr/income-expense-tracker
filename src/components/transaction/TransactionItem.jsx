@@ -1,19 +1,35 @@
+import { useAppState } from "../../state/useAppState";
+import { DELETE_TRANSACTION } from "../../state/appActions";
+
 export function TransactionItem({ transaction }) {
-const isIncome = transaction.type === "income";
+    const { dispatch } = useAppState();
 
-return (
-<div>
-    <div>
-        <strong>{transaction.title}</strong>
-        <p>{transaction.category}</p>
-    </div>
+    const isIncome = transaction.type === "income";
 
-    <div>
-        <strong>
-            {isIncome ? "+" : "-"} {transaction.amount} CHF
-        </strong>
-        <p>{transaction.date}</p>
-    </div>
-</div>
-);
+    function handleDelete() {
+        dispatch({
+            type: DELETE_TRANSACTION,
+            payload: transaction.id,
+        });
+    }
+
+    return (
+        <div className="transaction-item">
+            <div>
+                <strong>{transaction.title}</strong>
+                <p>{transaction.category}</p>
+            </div>
+
+            <div className="transaction-right">
+                <strong className={isIncome ? "income-text" : "expense-text"}>
+                    {isIncome ? "+" : "-"} {transaction.amount} CHF
+                </strong>
+                <p>{transaction.date}</p>
+            </div>
+
+            <button className="delete-button" onClick={handleDelete}>
+                Delete
+            </button>
+        </div>
+    );
 }

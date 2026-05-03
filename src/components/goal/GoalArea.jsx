@@ -2,7 +2,7 @@ import { GoalCard } from "./GoalCard";
 
 export function GoalArea({ goals }) {
     return (
-        <section>
+        <section className="card">
             <h2>Goals</h2>
 
             {goals.map(goal => (

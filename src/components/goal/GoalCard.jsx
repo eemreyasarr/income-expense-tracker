@@ -4,16 +4,17 @@ export function GoalCard({ goal }) {
     const percent = Math.round((goal.saved / goal.target) * 100);
 
     return (
-        <div>
-            <h3>{goal.title}</h3>
+        <div className="goal-card">
+            <div className="row">
+                <h3>{goal.title}</h3>
+                <strong>{percent}%</strong>
+            </div>
 
             <GoalProgress percent={percent} />
 
-            <p>
-                {goal.saved} CHF / {goal.target} CHF
+            <p className="muted">
+                {goal.saved} CHF saved from {goal.target} CHF
             </p>
-
-            <strong>{percent}%</strong>
         </div>
     );
 }

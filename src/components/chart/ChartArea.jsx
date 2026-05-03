@@ -12,9 +12,13 @@ export function ChartArea({ transactions }) {
         .reduce((total, item) => total + item.amount, 0);
 
     return (
-        <section>
-            <div>
-                <h2>Income & Expense</h2>
+        <section className="card chart-area">
+            <div className="chart-header">
+                <div>
+                    <h2>Income & Expense</h2>
+                    <p className="muted">Monthly overview</p>
+                </div>
+
                 <ChartFilter />
             </div>
 

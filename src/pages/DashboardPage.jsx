@@ -1,27 +1,31 @@
-import { useAppState } from "../state/useAppState";
+import { PageLayout } from "../components/layout/PageLayout";
 import { SummaryArea } from "../components/summary/SummaryArea";
+import { ChartArea } from "../components/chart/ChartArea";
+import { ExpenseArea } from "../components/expense/ExpenseArea";
 import { TransactionArea } from "../components/transaction/TransactionArea";
 import { BudgetArea } from "../components/budget/BudgetArea";
 import { GoalArea } from "../components/goal/GoalArea";
-import { ExpenseArea } from "../components/expense/ExpenseArea";
-import { ChartArea } from "../components/chart/ChartArea";
+import { useAppState } from "../state/useAppState";
 
 export function DashboardPage() {
     const { state } = useAppState();
 
     return (
-        <main>
+        <PageLayout>
             <SummaryArea transactions={state.transactions} />
 
-            <TransactionArea transactions={state.transactions} />
+            <div className="dashboard-grid">
+                <div className="left-column">
+                    <ChartArea transactions={state.transactions} />
+                    <TransactionArea transactions={state.transactions} />
+                </div>
 
-            <BudgetArea budgets={state.budgets} />
-
-            <GoalArea goals={state.goals} />
-
-            <ExpenseArea transactions={state.transactions} />
-
-            <ChartArea transactions={state.transactions} />
-        </main>
+                <div className="right-column">
+                    <ExpenseArea transactions={state.transactions} />
+                    <BudgetArea budgets={state.budgets} />
+                    <GoalArea goals={state.goals} />
+                </div>
+            </div>
+        </PageLayout>
     );
 }

@@ -12,10 +12,10 @@ export function SummaryArea({ transactions }) {
     const balance = totalIncome - totalExpense;
 
     return (
-        <section>
-            <SummaryCard title="Income" amount={totalIncome} />
-            <SummaryCard title="Expense" amount={totalExpense} />
-            <SummaryCard title="Balance" amount={balance} />
+        <section className="grid-3">
+            <SummaryCard title="Income" amount={totalIncome} type="income" />
+            <SummaryCard title="Expense" amount={totalExpense} type="expense" />
+            <SummaryCard title="Balance" amount={balance} type="balance" />
         </section>
     );
 }

@@ -1,7 +1,10 @@
 export function BudgetProgress({ percent }) {
     return (
-        <div>
-            <div style={{ width: `${percent}%` }} />
+        <div className="progress">
+            <div
+                className="progress-fill"
+                style={{ width: `${percent}%` }}
+            />
         </div>
     );
 }

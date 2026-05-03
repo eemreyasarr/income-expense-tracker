@@ -33,28 +33,30 @@ export function AddTransaction() {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="add-form" onSubmit={handleSubmit}>
             <h3>Add Transaction</h3>
 
-            <input
-                placeholder="Title"
-                value={title}
-                onChange={e => setTitle(e.target.value)}
-            />
+            <div className="form-row">
+                <input
+                    placeholder="Title"
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                />
 
-            <input
-                placeholder="Amount"
-                type="number"
-                value={amount}
-                onChange={e => setAmount(e.target.value)}
-            />
+                <input
+                    placeholder="Amount"
+                    type="number"
+                    value={amount}
+                    onChange={e => setAmount(e.target.value)}
+                />
 
-            <select value={type} onChange={e => setType(e.target.value)}>
-                <option value="expense">Expense</option>
-                <option value="income">Income</option>
-            </select>
+                <select value={type} onChange={e => setType(e.target.value)}>
+                    <option value="expense">Expense</option>
+                    <option value="income">Income</option>
+                </select>
 
-            <button type="submit">Add</button>
+                <button type="submit">Add</button>
+            </div>
         </form>
     );
 }

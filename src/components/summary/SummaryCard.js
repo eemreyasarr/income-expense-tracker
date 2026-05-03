@@ -1,8 +1,8 @@
-export function SummaryCard({ title, amount }) {
+export function SummaryCard({ title, amount, type }) {
     return (
-        <div>
-            <p>{title}</p>
-            <h3>{amount} CHF</h3>
+        <div className={`card summary-card ${type}`}>
+            <p className="muted">{title}</p>
+            <h3 className="money">{amount} CHF</h3>
         </div>
     );
 }

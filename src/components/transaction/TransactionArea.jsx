@@ -1,13 +1,27 @@
 import { TransactionList } from "./TransactionList";
 import { AddTransaction } from "./AddTransaction";
+import { TransactionFilter } from "./TransactionFilter";
+import { useAppState } from "../../state/useAppState";
 
 export function TransactionArea({ transactions }) {
+    const { state } = useAppState();
+
+    const selectedType = state.filters.selectedType;
+
+    const filteredTransactions =
+        selectedType === "all"
+            ? transactions
+            : transactions.filter(item => item.type === selectedType);
+
     return (
-        <section>
+        <section className="card transaction-area">
             <h2>Recent Transactions</h2>
 
             <AddTransaction />
-            <TransactionList transactions={transactions} />
+
+            <TransactionFilter />
+
+            <TransactionList transactions={filteredTransactions} />
         </section>
     );
 }

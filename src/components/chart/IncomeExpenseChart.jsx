@@ -1,33 +1,29 @@
 export function IncomeExpenseChart({ incomeTotal, expenseTotal }) {
     const maxValue = Math.max(incomeTotal, expenseTotal, 1);
 
-    const incomeHeight = (incomeTotal / maxValue) * 100;
-    const expenseHeight = (expenseTotal / maxValue) * 100;
+    const incomeHeight = Math.max((incomeTotal / maxValue) * 150, 16);
+    const expenseHeight = Math.max((expenseTotal / maxValue) * 150, 16);
 
     return (
-        <div style={{ display: "flex", gap: "24px", height: "180px", alignItems: "end" }}>
-            <div>
-                <div
-                    style={{
-                        height: `${incomeHeight}px`,
-                        width: "28px",
-                        background: "#4ade80",
-                        borderRadius: "12px",
-                    }}
-                />
-                <p>Income</p>
+        <div className="bar-chart">
+            <div className="bar-item">
+                <div className="bar-track">
+                    <div
+                        className="bar-fill income-bar"
+                        style={{ height: `${incomeHeight}px` }}
+                    />
+                </div>
+                <span>Income</span>
             </div>
 
-            <div>
-                <div
-                    style={{
-                        height: `${expenseHeight}px`,
-                        width: "28px",
-                        background: "#fb7185",
-                        borderRadius: "12px",
-                    }}
-                />
-                <p>Expense</p>
+            <div className="bar-item">
+                <div className="bar-track">
+                    <div
+                        className="bar-fill expense-bar"
+                        style={{ height: `${expenseHeight}px` }}
+                    />
+                </div>
+                <span>Expense</span>
             </div>
         </div>
     );

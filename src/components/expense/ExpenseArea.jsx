@@ -4,7 +4,7 @@ export function ExpenseArea({ transactions }) {
     const expenses = transactions.filter(item => item.type === "expense");
 
     return (
-        <section>
+        <section className="card">
             <h2>Expenses</h2>
 
             <ExpenseList expenses={expenses} />
