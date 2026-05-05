@@ -1,7 +1,14 @@
-export function SideMenuItem({ label, active }) {
+import { NavLink } from "react-router-dom";
+
+export function SideMenuItem({ label, to }) {
     return (
-        <button className={`side-menu-item ${active ? "active" : ""}`}>
+        <NavLink
+            to={to}
+            className={({ isActive }) =>
+                `side-menu-item ${isActive ? "active" : ""}`
+            }
+        >
             {label}
-        </button>
+        </NavLink>
     );
 }

@@ -14,7 +14,7 @@ function getSavedState() {
 }
 
 export function AppProvider({ children }) {
-    const [state, dispatch] = useReducer(appReducer, initialState);
+    const [state, dispatch] = useReducer(appReducer, initialState, getSavedState);
 
     useEffect(() => {
         localStorage.setItem(

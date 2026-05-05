@@ -12,11 +12,10 @@ export function SideMenu() {
             </div>
 
             <nav>
-                <SideMenuItem label="Dashboard" active />
-                <SideMenuItem label="Transactions" />
-                <SideMenuItem label="Budgets" />
-                <SideMenuItem label="Goals" />
-                <SideMenuItem label="Settings" />
+                <SideMenuItem label="Dashboard" to="/" />
+                <SideMenuItem label="Transactions" to="/transactions" />
+                <SideMenuItem label="Budgets" to="/budgets" />
+                <SideMenuItem label="Goals" to="/goals" />
             </nav>
 
             <div className="side-card">
