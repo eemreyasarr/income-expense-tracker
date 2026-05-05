@@ -1,3 +1,4 @@
+import { PageLayout } from "../components/layout/PageLayout";
 import { SummaryArea } from "../components/summary/SummaryArea";
 import { ChartArea } from "../components/chart/ChartArea";
 import { ExpenseArea } from "../components/expense/ExpenseArea";
@@ -14,7 +15,7 @@ export function DashboardPage() {
     );
 
     return (
-        <>
+        <PageLayout>
             <SummaryArea transactions={filteredTransactions} />
 
             <div className="dashboard-grid">
@@ -29,6 +30,6 @@ export function DashboardPage() {
                     <GoalArea goals={state.goals} />
                 </div>
             </div>
-        </>
+        </PageLayout>
     );
 }
