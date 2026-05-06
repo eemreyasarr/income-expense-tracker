@@ -1,64 +1,60 @@
 # Income Expense Tracker
 
-Personal finance management and expense tracking application.
+A modern React-based web application for tracking personal income and expenses.
+
+The application helps users monitor financial activity, manage transactions, and visualize spending habits through a clean, responsive, and user-friendly interface.
+
+---
 
 ## About
 
-This repository contains the source code for the `income-expense-tracker` project.
+This project was developed to simplify personal finance management by providing an intuitive dashboard for tracking income and expenses.
 
-The application is designed to help users monitor their financial activity by tracking income, expenses, budgeting workflows, and financial summaries in a centralized system.
+Users can:
 
-The goal of the platform is to simplify personal finance management through clear visualizations and organized expense tracking.
+* Add financial transactions
+* Categorize income and expenses
+* Monitor account balance
+* Analyze spending habits
+* Improve budgeting workflows
 
----
-
-## Purpose
-
-The main purpose of this project is to provide users with tools for:
-
-* Tracking income and expenses
-* Monitoring financial balance
-* Budget management
-* Expense categorization
-* Financial reporting
-* Spending analysis
-* Personal finance organization
+The application focuses on simplicity, usability, and responsive design.
 
 ---
 
-## Core Features
+## Features
 
 * Income & expense tracking
-* Dashboard overview
-* Budget planning
+* Real-time balance calculation
 * Transaction history
-* Category-based expense management
-* Responsive user interface
-* Search & filtering
-* Financial summaries
-* Scalable architecture
-* User-friendly workflows
+* Category-based organization
+* Responsive modern UI
+* Financial overview dashboard
+* Dynamic state management
+* Reusable React components
+* Local data persistence
+* Clean and scalable frontend architecture
 
 ---
 
-## Possible Use Cases
+## Technologies
 
-The platform can be used for:
+This project is built using:
 
-* Personal budgeting
-* Monthly expense tracking
-* Household finance management
-* Freelance income tracking
-* Subscription monitoring
-* Financial habit analysis
-* Savings planning
-* Small business expense management
+* React
+* JavaScript / TypeScript
+* React Hooks
+* Context API
+* HTML5
+* CSS3
+* REST API
+* Local Storage
 
 ---
 
-## Vision
+## Project Goal
 
-The long-term vision of this project is to create a lightweight and accessible financial management platform that helps users gain better control over their spending habits and financial decisions.
+The goal of this project is to create a lightweight and efficient financial tracking system that helps users better understand and manage their personal finances.
 
 ---
 
@@ -66,37 +62,39 @@ The long-term vision of this project is to create a lightweight and accessible f
 
 Clone the repository:
 
-```bash id="5f7z2q"
+```bash id="l0f2k1"
 git clone https://github.com/eemreyasarr/income-expense-tracker.git
 ```
 
-Navigate into the project:
+Navigate into the project directory:
 
-```bash id="2v1wxe"
+```bash id="m7v3q8"
 cd income-expense-tracker
 ```
 
 Install dependencies:
 
-```bash id="0xq3rm"
+```bash id="w3d9p2"
 npm install
 ```
 
-Run locally:
+Start the development server:
 
-```bash id="9w1nkt"
+```bash id="k8u1r4"
 npm start
 ```
 
 ---
 
-## Project Structure
+## Folder Structure
 
-```text id="3m0pqa"
+```text id="j1x0n7"
 src/
 components/
-services/
 pages/
+context/
+hooks/
+services/
 assets/
 styles/
 ```
@@ -105,38 +103,34 @@ styles/
 
 ## Future Improvements
 
-* Bank API integration
-* AI-powered expense analysis
-* Financial forecasting
-* Multi-currency support
-* Push notifications
-* PDF & Excel export
-* Mobile application support
-* Expense prediction system
-* Shared family budgeting
+* Authentication system
 * Cloud synchronization
+* Expense analytics
+* Chart visualizations
+* Multi-currency support
+* Dark mode support
+* Mobile application
+* CSV / PDF export
+* AI-powered spending analysis
+* Budget planning system
 
 ---
 
-## Security Goals
+## Screenshots
 
-* Secure authentication
-* Protected financial data
-* Encrypted sensitive information
-* GDPR-compliant data handling
-* Scalable backend infrastructure
+Add application screenshots here.
 
 ---
 
 ## License
 
-Private project - all rights reserved.
+This project is licensed for personal and educational use.
 
 ---
 
 ## Author
 
-Emre Yaşar
+Emre Yasar
 
 Full Stack Software Developer
 Switzerland
