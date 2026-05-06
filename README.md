@@ -1,70 +1,142 @@
-# Getting Started with Create React App
+# Income Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal finance management and expense tracking application.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This repository contains the source code for the `income-expense-tracker` project.
 
-### `npm start`
+The application is designed to help users monitor their financial activity by tracking income, expenses, budgeting workflows, and financial summaries in a centralized system.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The goal of the platform is to simplify personal finance management through clear visualizations and organized expense tracking.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Purpose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The main purpose of this project is to provide users with tools for:
 
-### `npm run build`
+* Tracking income and expenses
+* Monitoring financial balance
+* Budget management
+* Expense categorization
+* Financial reporting
+* Spending analysis
+* Personal finance organization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Core Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Income & expense tracking
+* Dashboard overview
+* Budget planning
+* Transaction history
+* Category-based expense management
+* Responsive user interface
+* Search & filtering
+* Financial summaries
+* Scalable architecture
+* User-friendly workflows
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Possible Use Cases
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The platform can be used for:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Personal budgeting
+* Monthly expense tracking
+* Household finance management
+* Freelance income tracking
+* Subscription monitoring
+* Financial habit analysis
+* Savings planning
+* Small business expense management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Vision
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The long-term vision of this project is to create a lightweight and accessible financial management platform that helps users gain better control over their spending habits and financial decisions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Clone the repository:
 
-### Analyzing the Bundle Size
+```bash id="5f7z2q"
+git clone https://github.com/eemreyasarr/income-expense-tracker.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Navigate into the project:
 
-### Making a Progressive Web App
+```bash id="2v1wxe"
+cd income-expense-tracker
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Install dependencies:
 
-### Advanced Configuration
+```bash id="0xq3rm"
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Run locally:
 
-### Deployment
+```bash id="9w1nkt"
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text id="3m0pqa"
+src/
+components/
+services/
+pages/
+assets/
+styles/
+```
+
+---
+
+## Future Improvements
+
+* Bank API integration
+* AI-powered expense analysis
+* Financial forecasting
+* Multi-currency support
+* Push notifications
+* PDF & Excel export
+* Mobile application support
+* Expense prediction system
+* Shared family budgeting
+* Cloud synchronization
+
+---
+
+## Security Goals
+
+* Secure authentication
+* Protected financial data
+* Encrypted sensitive information
+* GDPR-compliant data handling
+* Scalable backend infrastructure
+
+---
+
+## License
+
+Private project - all rights reserved.
+
+---
+
+## Author
+
+Emre Yaşar
+
+Full Stack Software Developer
+Switzerland
